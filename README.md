@@ -8,8 +8,7 @@
 
 ## C_Lesson_2015_1
 ### 받아 보는 방법
-### Zip 으로 받아 보기
+#### Zip 으로 받아 보기
 https://github.com/cakel/C_Lesson_2015_1/archive/master.zip
-
-### Desktop Client 을 써서 받아 보기
+#### Desktop Client 을 써서 받아 보기
 git clone https://github.com/cakel/C_Lesson_2015_1.git 을 입력하시면 받을 수 있습니다.
