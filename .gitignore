@@ -1,4 +1,3 @@
 # files to be ignored from upstream
 *.sdf
 *.opensdf
-Debug/
