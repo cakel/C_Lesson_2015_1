@@ -31,7 +31,7 @@ boolean		model_stack_push(int data)
 	boolean success = false;
 
 	// Malloc a Node and push by data
-
+	printf("%s() - input : %d\n", __FUNCTION__, data);
 	return success;
 }
 boolean			model_stack_pop(int* poppedValue)
