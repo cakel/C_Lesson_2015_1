@@ -7,7 +7,7 @@
     </Filter>
     <Filter Include="헤더 파일">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
     <Filter Include="리소스 파일">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
@@ -15,10 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="control.c">
+    <ClCompile Include="main.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="main.c">
+    <ClCompile Include="view_draw.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="model_data.c">
@@ -27,10 +27,7 @@
     <ClCompile Include="model_file.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="view_draw.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="view_hotel.c">
+    <ClCompile Include="control.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
@@ -44,13 +41,7 @@
     <ClInclude Include="view_draw.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="control.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="common.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="view_hotel.h">
+    <ClInclude Include="view_key.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
