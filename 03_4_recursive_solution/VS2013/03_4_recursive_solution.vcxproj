@@ -82,12 +82,14 @@
     <ClCompile Include="model_data.c" />
     <ClCompile Include="model_file.c" />
     <ClCompile Include="view_draw.c" />
-    <ClCompile Include="control.c" />
+    <ClCompile Include="view_hotel.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="common.h" />
     <ClInclude Include="model_data.h" />
     <ClInclude Include="model_file.h" />
     <ClInclude Include="view_draw.h" />
+    <ClInclude Include="view_hotel.h" />
     <ClInclude Include="view_key.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
