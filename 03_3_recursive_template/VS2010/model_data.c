@@ -81,29 +81,3 @@ int hotel_getValue(HOTEL_MENUITEM_T hotelMode_Index)
 		return 0;
 	}
 }
-
-boolean hotel_setValue(HOTEL_MENUITEM_T hotelMode_Index, unsigned int toChangeValue)
-{
-	unsigned int searchIndex = 0;
-	unsigned int found = false;
-
-	for (searchIndex = 0; searchIndex < TBL_NUM(HOTEL_DATABASE); searchIndex++)
-	{
-		if (hotelMode_Index == HOTEL_DATABASE[searchIndex].key)
-		{
-			found = true;
-			break;
-		}
-	}
-
-	if (found)
-	{
-		HOTEL_DATABASE[searchIndex].value = toChangeValue;
-		return true;
-	}
-	else
-	{
-		printf("%s():%d - Finding (%d) Index Value was failed...", __FUNCTION__, __LINE__);
-		return false;
-	}
-}

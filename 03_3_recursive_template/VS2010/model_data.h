@@ -1,6 +1,5 @@
 #ifndef _MODEL_DATA_H_
 #define _MODEL_DATA_H_
-#include "common.h"
 
 typedef enum
 {
@@ -35,7 +34,6 @@ typedef struct HOTEL_MODEL {
 
 HOTEL_UI_T* hotel_getItemInformation(HOTEL_MENUITEM_T findItem);
 int hotel_getValue(HOTEL_MENUITEM_T hotelMode_Index);
-boolean hotel_setValue(HOTEL_MENUITEM_T hotelMode_Index, unsigned int toChangeValue);
 
 
 #endif
