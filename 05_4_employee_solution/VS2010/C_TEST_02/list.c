@@ -53,12 +53,8 @@ void insert_node(Node* head, Node *tp)
 		{
 			toBeAppended = toBeAppended->next;
 		}
-
 		toBeAppended->next = tp;
-
 	}
-	
-
 }
 
 // Desc : Sorting the list
@@ -66,21 +62,42 @@ void insert_node(Node* head, Node *tp)
 // Return : None
 void sort_list(Node *head)
 {
-	
 
     // TODO: Write code here
 	int nodeCount = 0, i = 0, j = 0;
-	Node* startNode = head->next, *secondNode = NULL;
-	Node swapNode = {0,};
+	Node* startNode = head, *secondNode = NULL;
+	Employee *swapEmployee = NULL;
 
-	while(startNode != NULL)
+	while (startNode->next != NULL)
 	{
 		startNode = startNode->next;
 		nodeCount++;
 	}
 
-	// 2번째 Node 부터
+	// Reset Node
+	startNode = head->next;
 
+	// Bubble Sort	
+	for (i = 0; i < nodeCount - 1; i++)
+	{
+		for (j = 0;
+			startNode != NULL && j < nodeCount - 1 - i;
+			j++)
+		{
+			secondNode = startNode;
+
+			while (secondNode->next)
+			{
+				if (strcmp(secondNode->data->emp_no, secondNode->next->data->emp_no) == 1)
+				{
+					swapEmployee = secondNode->data;
+					secondNode->data = secondNode->next->data;
+					secondNode->next->data = swapEmployee;
+				}
+				secondNode = secondNode->next;
+			}
+		}
+	}
 }
 
 // Desc : Removing a node from list
@@ -88,10 +105,28 @@ void sort_list(Node *head)
 // Return : None
 void remove_node(Node* head, Node *tp)
 {
-
-
     // TODO: Write code here
+	Node* preNode = head, *searchNode = head->next;
 
+	if (head == NULL || tp == NULL)
+	{
+		puts("Either head or tp is NULL");
+	}
+	// Head
+
+	while (searchNode)
+	{
+		if (strcmp(searchNode->data->emp_no, tp->data->emp_no) == 0)
+		{
+			preNode->next = tp->next;
+			free(tp);
+			tp = NULL;
+			break;
+		}
+
+		preNode		= searchNode;
+		searchNode	= searchNode->next;
+	}
 
 }
 
@@ -126,10 +161,15 @@ Node *find_node(Node *head, char *new_emp_no)
 // Return : None
 void deallocate_list(Node *head)
 {
-    
-    
     // TODO: Write code here
+	Node* toBeDeleted = head->next;
 
+	while (head->next != NULL)
+	{
+		toBeDeleted	= head->next;
+		head->next	= head->next->next;
+		free(toBeDeleted);
+	}
 
 }
 
