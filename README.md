@@ -5,7 +5,14 @@
 2015년 6월 부터 수업 중인 내용입니다.
 
 * [x] Array
-* [ ] Stack
+* [x] Stack
+* [x] List
+* [x] Pointer
+* [x] File
+* [x] Screen / Keyboard
+* [x] Recursion
+* [x] String
+* [x] Pre-Test
 
 ## C\_Lesson\_2015\_1
 ### 받아 보는 방법
