@@ -171,7 +171,7 @@ int get_word_count(char *p_str)
 
 	// TODO: Write code here
 	char* token = NULL, *nextContext = NULL;
-	char* wordList[50] = {0}, wordCount = 0;
+	char* wordList[50] = {0}, i = 0;
 
 	token = strtok_s(p_str, " \n\r", &nextContext);
 
@@ -187,6 +187,15 @@ int get_word_count(char *p_str)
 		}
 
 		token = strtok_s(NULL, " \n\r", &nextContext);
+	}
+
+	for(i = 0; i < cnt; i++)
+	{
+		if(wordList[i] != NULL)
+		{
+			free(wordList[i]);
+			wordList[i] = NULL;
+		}
 	}
 
     return cnt;
